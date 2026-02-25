@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoulSyncs | 完璧を作ってから、納品する会社ではありません</title>
+  <meta name="description" content="ソウルシンクスは、ITと現場をつなぐ共創型のデジタルパートナーです。30点から始め、一緒に120点を目指します。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Noto+Serif+JP:wght@300;400;700&family=Inter:wght@200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loading">
+
+  <!-- ローディング画面 -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <img src="images/logo-dark.png" alt="SoulSyncs" class="logo-img loader-logo-img">
+      </div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
+  <!-- カーソル -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- ナビゲーション -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-container">
+      <a href="#" class="nav-logo">
+        <img src="images/logo-dark.png" alt="SoulSyncs" class="logo-img nav-logo-img">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#philosophy" class="nav-link" data-en="PHILOSOPHY">私たちの思想</a></li>
+        <li><a href="#services" class="nav-link" data-en="SERVICES">サービス</a></li>
+        <li><a href="#live-systems" class="nav-link" data-en="SYSTEMS">稼働実績</a></li>
+        <li><a href="#pricing" class="nav-link" data-en="PRICING">料金</a></li>
+        <li><a href="#process-timeline" class="nav-link" data-en="PROCESS">プロセス</a></li>
+        <li><a href="#message" class="nav-link" data-en="MESSAGE">CEOメッセージ</a></li>
+        <li><a href="#recruit" class="nav-link" data-en="RECRUIT">採用</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">
+        <span>相談する</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- モバイルメニュー -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <ul>
+        <li><a href="#philosophy" class="mobile-link">私たちの思想</a></li>
+        <li><a href="#services" class="mobile-link">サービス</a></li>
+        <li><a href="#live-systems" class="mobile-link">稼働実績</a></li>
+        <li><a href="#pricing" class="mobile-link">料金</a></li>
+        <li><a href="#process-timeline" class="mobile-link">プロセス</a></li>
+        <li><a href="#message" class="mobile-link">CEOメッセージ</a></li>
+        <li><a href="#recruit" class="mobile-link">採用</a></li>
+        <li><a href="#contact" class="mobile-link mobile-cta">相談する</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-geo geo-1"></div>
+        <div class="hero-geo geo-2"></div>
+        <div class="hero-geo geo-3"></div>
+        <canvas class="hero-particles" id="heroParticles"></canvas>
+      </div>
+
+      <div class="hero-content">
+        <div class="hero-eyebrow reveal-up">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Humanity in Logic</span>
+        </div>
+
+        <h1 class="hero-headline">
+          <span class="headline-line reveal-up" data-delay="0.1">
+            <span class="headline-mask">完璧を作ってから、</span>
+          </span>
+          <span class="headline-line reveal-up" data-delay="0.2">
+            <span class="headline-mask">納品する会社では</span>
+          </span>
+          <span class="headline-line headline-accent reveal-up" data-delay="0.3">
+            <span class="headline-mask">ありません。</span>
+          </span>
+        </h1>
+
+        <div class="hero-sub reveal-up" data-delay="0.5">
+          <p>30点でも、一緒に走り始める。<br>それが私たちの、信頼の始まりです。</p>
+        </div>
+
+        <div class="hero-actions reveal-up" data-delay="0.7">
+          <a href="#philosophy" class="btn-primary">
+            <span>思想を知る</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="#process" class="btn-ghost">
+            <span>プロセスを見る</span>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="hero-counter-wrap reveal-up" data-delay="0.9">
+        <div class="hero-counter">
+          <div class="counter-item">
+            <span class="counter-num" data-target="120">0</span>
+            <span class="counter-unit">点</span>
+            <span class="counter-label">到達目標</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-item">
+            <span class="counter-num" data-target="30">0</span>
+            <span class="counter-unit">点</span>
+            <span class="counter-label">出発点</span>
+          </div>
+          <div class="counter-divider"></div>
+          <div class="counter-item">
+            <span class="counter-num" data-target="0">∞</span>
+            <span class="counter-unit"></span>
+            <span class="counter-label">可能性</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MANIFESTO SECTION ===== -->
+    <section class="manifesto" id="philosophy">
+      <div class="manifesto-bg">
+        <div class="manifesto-noise"></div>
+      </div>
+      <div class="container">
+        <div class="manifesto-layout">
+          <div class="manifesto-label reveal-left">
+            <span class="label-num">01</span>
+            <span class="label-text">PHILOSOPHY</span>
+          </div>
+
+          <div class="manifesto-body">
+            <h2 class="manifesto-title reveal-up">
+              技術は手段。<br>
+              <em>人間が、答えです。</em>
+            </h2>
+
+            <div class="manifesto-text reveal-up" data-delay="0.2">
+              <p>
+                多くのIT企業は「技術力」を売ります。<br>
+                私たちは「人間力」を売ります。
+              </p>
+              <p>
+                現場の混乱、言語化できない課題、<br>
+                「なんとなくうまくいっていない」という感覚。<br>
+                それを一緒に解きほぐすのが、私たちの仕事です。
+              </p>
+              <p>
+                逃げない。曖昧にしない。<br>
+                完璧でなくていい。ただ、誠実でいる。
+              </p>
+            </div>
+
+            <div class="manifesto-values reveal-up" data-delay="0.4">
+              <div class="value-card">
+                <div class="value-icon">
+                  <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="20" stroke="#DE3F2C" stroke-width="2" fill="none"/><path d="M16 24l6 6 10-12" stroke="#DE3F2C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                </div>
+                <h3>透明性</h3>
+                <p>プロセスを隠さない。課題もリスクも、全てをオープンにする誠実さ。</p>
+              </div>
+              <div class="value-card">
+                <div class="value-icon">
+                  <svg viewBox="0 0 48 48"><path d="M24 8 L40 32 H8 Z" stroke="#DE3F2C" stroke-width="2" fill="none"/><circle cx="24" cy="28" r="3" fill="#DE3F2C"/></svg>
+                </div>
+                <h3>共創</h3>
+                <p>完成品を渡すのではなく、作るプロセスそのものを共に歩む。</p>
+              </div>
+              <div class="value-card">
+                <div class="value-icon">
+                  <svg viewBox="0 0 48 48"><path d="M8 24 Q16 8 24 24 Q32 40 40 24" stroke="#DE3F2C" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+                </div>
+                <h3>進化</h3>
+                <p>30点から始め、一緒に走りながら、必ず120点を超えていく。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BLACK BOX → CRYSTAL CLEAR SECTION ===== -->
+    <section class="crystal" id="process">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">02 — PROCESS</span>
+          <h2 class="section-title">
+            Black Box から<br>
+            <span class="gradient-text">Crystal Clear へ</span>
+          </h2>
+          <p class="section-desc">見えない課題が、解決されるまで。</p>
+        </div>
+
+        <div class="crystal-journey">
+          <!-- Step 1 -->
+          <div class="journey-step" data-step="1">
+            <div class="step-visual">
+              <div class="step-box black-box">
+                <div class="box-icon">
+                  <i class="fas fa-question"></i>
+                </div>
+                <div class="box-noise"></div>
+              </div>
+              <div class="step-connector">
+                <div class="connector-line"></div>
+                <div class="connector-arrow"></div>
+              </div>
+            </div>
+            <div class="step-content reveal-right">
+              <span class="step-num">01</span>
+              <h3>課題の霧</h3>
+              <p>「なんとなくうまくいっていない」<br>言語化できない問題が現場に漂っている。</p>
+              <div class="step-tag black">BLACK BOX</div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="journey-step reverse" data-step="2">
+            <div class="step-visual">
+              <div class="step-box translucent-box">
+                <div class="box-icon">
+                  <i class="fas fa-search"></i>
+                </div>
+              </div>
+              <div class="step-connector">
+                <div class="connector-line"></div>
+                <div class="connector-arrow"></div>
+              </div>
+            </div>
+            <div class="step-content reveal-left">
+              <span class="step-num">02</span>
+              <h3>深掘りのヒアリング</h3>
+              <p>表面の「困っていること」ではなく、<br>根本にある「なぜ」を一緒に探る。</p>
+              <div class="step-tag translucent">DISCOVERING</div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="journey-step" data-step="3">
+            <div class="step-visual">
+              <div class="step-box semi-box">
+                <div class="box-icon">
+                  <i class="fas fa-drafting-compass"></i>
+                </div>
+              </div>
+              <div class="step-connector">
+                <div class="connector-line"></div>
+                <div class="connector-arrow"></div>
+              </div>
+            </div>
+            <div class="step-content reveal-right">
+              <span class="step-num">03</span>
+              <h3>30点の設計図</h3>
+              <p>完璧じゃなくていい。動くプロトタイプで、<br>仮説を素早く検証する。</p>
+              <div class="step-tag semi">PROTOTYPING</div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="journey-step reverse" data-step="4">
+            <div class="step-visual">
+              <div class="step-box crystal-box">
+                <div class="box-icon">
+                  <i class="fas fa-gem"></i>
+                </div>
+                <div class="crystal-shine"></div>
+              </div>
+            </div>
+            <div class="step-content reveal-left">
+              <span class="step-num">04</span>
+              <h3>120点の現実</h3>
+              <p>共に走り、共に改善し、<br>想定を超えた成果を共に喜ぶ。</p>
+              <div class="step-tag crystal">CRYSTAL CLEAR</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- スクロール進捗バー -->
+        <div class="journey-progress" id="journeyProgress">
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-labels">
+            <span>BLACK BOX</span>
+            <span>CRYSTAL CLEAR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services" id="services">
+      <div class="services-bg">
+        <div class="services-gradient"></div>
+      </div>
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">03 — SERVICES</span>
+          <h2 class="section-title">
+            「現場」から始まる、<br>
+            <span class="gradient-text">3つの解決策</span>
+          </h2>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card reveal-up" data-delay="0.1">
+            <div class="service-number">01</div>
+            <div class="service-icon-wrap">
+              <div class="service-icon">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <rect x="8" y="12" width="48" height="36" rx="4" stroke="currentColor" stroke-width="2"/>
+                  <path d="M20 28h24M20 36h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="48" cy="44" r="10" fill="#DE3F2C" opacity="0.15"/>
+                  <circle cx="48" cy="44" r="6" stroke="#DE3F2C" stroke-width="2" fill="none"/>
+                  <path d="M45 44l2 2 4-4" stroke="#DE3F2C" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">業務デジタル化<br>コンサルティング</h3>
+            <p class="service-desc">
+              紙・エクセル・属人化した業務を解体し、
+              再設計する。現場を理解したうえでの、
+              本質的なDX推進。
+            </p>
+            <ul class="service-features">
+              <li>業務フロー可視化・再設計</li>
+              <li>ツール選定・導入支援</li>
+              <li>定着化まで伴走</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>詳しく見る</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card featured reveal-up" data-delay="0.2">
+            <div class="service-badge">MOST POPULAR</div>
+            <div class="service-number">02</div>
+            <div class="service-icon-wrap">
+              <div class="service-icon">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <path d="M12 52V24l20-12 20 12v28" stroke="currentColor" stroke-width="2"/>
+                  <rect x="24" y="36" width="16" height="16" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="32" cy="20" r="4" stroke="#DE3F2C" stroke-width="2"/>
+                  <path d="M20 52h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">システム開発・<br>カスタムツール構築</h3>
+            <p class="service-desc">
+              既製品では解決できない業務課題に、
+              完全オーダーメイドのシステムを。
+              30点のMVPから始める開発スタイル。
+            </p>
+            <ul class="service-features">
+              <li>要件定義から運用まで一貫</li>
+              <li>MVP（最小構成）優先開発</li>
+              <li>スクラム型共創開発</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>詳しく見る</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="service-card reveal-up" data-delay="0.3">
+            <div class="service-number">03</div>
+            <div class="service-icon-wrap">
+              <div class="service-icon">
+                <svg viewBox="0 0 64 64" fill="none">
+                  <circle cx="20" cy="20" r="8" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="44" cy="20" r="8" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="32" cy="44" r="8" stroke="#DE3F2C" stroke-width="2"/>
+                  <line x1="27" y1="26" x2="35" y2="36" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                  <line x1="37" y1="26" x2="37" y2="36" stroke="currentColor" stroke-width="1.5" opacity="0.5"/>
+                </svg>
+              </div>
+            </div>
+            <h3 class="service-title">組織・チームの<br>IT内製化支援</h3>
+            <p class="service-desc">
+              外注依存から脱却し、自走できるチームを
+              作る。技術の民主化で、組織の底力を
+              引き上げる。
+            </p>
+            <ul class="service-features">
+              <li>IT人材育成プログラム</li>
+              <li>ノーコード・ローコード導入</li>
+              <li>内製化ロードマップ策定</li>
+            </ul>
+            <a href="#contact" class="service-link">
+              <span>詳しく見る</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MOVIE SECTION ===== -->
+    <section class="ax-movie" id="movie">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— MOVIE</span>
+          <h2 class="section-title">
+            まずは動画で、<br>
+            <span class="gradient-text">ソウルシンクスを知ってください。</span>
+          </h2>
+        </div>
+        <div class="movie-wrap reveal-up" data-delay="0.15">
+          <div class="movie-thumbnail" id="movieThumbnail" onclick="openYoutube()">
+            <img src="https://img.youtube.com/vi/ulDADskK5-E/maxresdefault.jpg" alt="Soul Sync's 会社紹介動画 2025" class="movie-thumb-img">
+            <div class="movie-overlay">
+              <div class="movie-play-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="movie-gradient"></div>
+              <p class="movie-label">Soul Sync's 会社紹介動画 2025</p>
+            </div>
+          </div>
+          <div class="movie-iframe-wrap" id="movieIframe" style="display:none">
+            <iframe src="https://www.youtube.com/embed/ulDADskK5-E?autoplay=1" title="Soul Sync's 会社紹介動画 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LIVE SYSTEMS SECTION ===== -->
+    <section class="live-systems" id="live-systems">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— LIVE SYSTEMS</span>
+          <h2 class="section-title white-title">
+            私たちが作ったシステムは、<br>
+            <span class="accent-text">今も動いています。</span>
+          </h2>
+          <p class="section-desc white-desc">稼働率100%。5本すべてが、今日も現場で動き続けています。</p>
+        </div>
+
+        <div class="systems-grid">
+          <div class="system-card reveal-up" data-delay="0.1">
+            <div class="system-card-header">
+              <span class="system-tag">法令対応</span>
+              <span class="system-live"><span class="live-dot"></span>本番稼働中</span>
+            </div>
+            <h3 class="system-name">安全管理システム</h3>
+            <p class="system-client">軽貨物運送会社（千葉県）</p>
+            <div class="system-problem">
+              <p class="problem-label">解決した悩み</p>
+              <p class="problem-text">"令和7年4月の法改正に対応できておらず、行政処分のリスクがあった"</p>
+            </div>
+            <p class="system-result">2週間で完全対応。LINEで入力するだけで書類が自動完成</p>
+          </div>
+
+          <div class="system-card reveal-up" data-delay="0.15">
+            <div class="system-card-header">
+              <span class="system-tag">業務管理</span>
+              <span class="system-live"><span class="live-dot"></span>本番稼働中</span>
+            </div>
+            <h3 class="system-name">海外取引管理Hub</h3>
+            <p class="system-client">輸入食品会社（東京都）</p>
+            <div class="system-problem">
+              <p class="problem-label">解決した悩み</p>
+              <p class="problem-text">"注文・在庫・請求が全部バラバラで、毎回1時間以上の手作業が必要だった"</p>
+            </div>
+            <p class="system-result">二重入力ゼロ。為替自動計算・入金アラートも自動化</p>
+          </div>
+
+          <div class="system-card reveal-up" data-delay="0.2">
+            <div class="system-card-header">
+              <span class="system-tag">人材管理</span>
+              <span class="system-live"><span class="live-dot"></span>本番稼働中</span>
+            </div>
+            <h3 class="system-name">Re:nk OS</h3>
+            <p class="system-client">自社開発（他社導入可）</p>
+            <div class="system-problem">
+              <p class="problem-label">解決した悩み</p>
+              <p class="problem-text">"給与・シフト・LINE通知がバラバラ。月末締め処理に丸1日かかっていた"</p>
+            </div>
+            <p class="system-result">1画面で完結。求人票も5秒で自動生成</p>
+          </div>
+
+          <div class="system-card reveal-up" data-delay="0.25">
+            <div class="system-card-header">
+              <span class="system-tag">AI秘書</span>
+              <span class="system-live"><span class="live-dot"></span>本番稼働中</span>
+            </div>
+            <h3 class="system-name">ソウルくん</h3>
+            <p class="system-client">自社開発・本番稼働中</p>
+            <div class="system-problem">
+              <p class="problem-label">解決した悩み</p>
+              <p class="problem-text">"社内チャットへの対応に毎日2〜3時間かかっていた"</p>
+            </div>
+            <p class="system-result">AIが読んで・分類して・返答まで完全自動化</p>
+          </div>
+
+          <div class="system-card reveal-up" data-delay="0.3">
+            <div class="system-card-header">
+              <span class="system-tag">財務照会</span>
+              <span class="system-live"><span class="live-dot"></span>本番稼働中</span>
+            </div>
+            <h3 class="system-name">SS財務Bot</h3>
+            <p class="system-client">自社開発・本番稼働中</p>
+            <div class="system-problem">
+              <p class="problem-label">解決した悩み</p>
+              <p class="problem-text">"今月の売上・利益をすぐ確認したいのに、毎回ソフトを開くのが面倒だった"</p>
+            </div>
+            <p class="system-result">「今月の粗利は？」と話しかけるだけで即答</p>
+          </div>
+        </div>
+
+        <div class="systems-stats reveal-up" data-delay="0.4">
+          <div class="sys-stat">
+            <p class="sys-stat-num">5本</p>
+            <p class="sys-stat-label">本番稼働中</p>
+          </div>
+          <div class="sys-stat-divider"></div>
+          <div class="sys-stat">
+            <p class="sys-stat-num">100%</p>
+            <p class="sys-stat-label">クライアント稼働率</p>
+          </div>
+          <div class="sys-stat-divider"></div>
+          <div class="sys-stat">
+            <p class="sys-stat-num">74万行</p>
+            <p class="sys-stat-label">累計コード規模</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NUMBERS / PROOF SECTION ===== -->
+    <section class="proof" id="proof">
+      <div class="container">
+        <div class="proof-grid">
+          <div class="proof-text reveal-left">
+            <span class="section-label">04 — PROOF</span>
+            <h2 class="proof-title">
+              数字が語る、<br>現場の実績。
+            </h2>
+            <p class="proof-desc">
+              私たちのアプローチは、「一緒に走る」こと。
+              だから、プロジェクト完走率と顧客継続率が、
+              私たちの信頼の証明になっています。
+            </p>
+          </div>
+
+          <div class="proof-stats reveal-right">
+            <div class="stat-item">
+              <div class="stat-num">
+                <span class="stat-count" data-target="98">0</span>
+                <span class="stat-suffix">%</span>
+              </div>
+              <div class="stat-label">プロジェクト完走率</div>
+              <div class="stat-bar"><div class="stat-fill" data-width="98"></div></div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">
+                <span class="stat-count" data-target="92">0</span>
+                <span class="stat-suffix">%</span>
+              </div>
+              <div class="stat-label">顧客継続率</div>
+              <div class="stat-bar"><div class="stat-fill" data-width="92"></div></div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">
+                <span class="stat-count" data-target="47">0</span>
+                <span class="stat-suffix">社</span>
+              </div>
+              <div class="stat-label">支援企業数</div>
+              <div class="stat-bar"><div class="stat-fill" data-width="78"></div></div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">
+                <span class="stat-count" data-target="4.9">0</span>
+                <span class="stat-suffix">/5</span>
+              </div>
+              <div class="stat-label">顧客満足度スコア</div>
+              <div class="stat-bar"><div class="stat-fill" data-width="98"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 導入事例カード -->
+        <div class="cases-title reveal-up">
+          <h3>伴走の成果を、数字でお見せします。</h3>
+        </div>
+        <div class="cases-grid results-grid">
+          <div class="case-card result-card reveal-up" data-delay="0.1">
+            <span class="result-tag">ファイナンス</span>
+            <h4 class="result-company">合同会社風来坊</h4>
+            <p class="result-headline red-result">1年半で約1.5億円の費用削減</p>
+            <p class="case-text">業務フローの改善、財務内容の見直しにより大幅コスト削減を実現</p>
+          </div>
+          <div class="case-card result-card reveal-up" data-delay="0.15">
+            <span class="result-tag">マーケティング</span>
+            <h4 class="result-company">青山花壇株式会社</h4>
+            <p class="result-headline teal-result">売上 前年比200%達成</p>
+            <p class="case-text">SNSからオウンドメディアへの販売導線を再構築</p>
+          </div>
+          <div class="case-card result-card reveal-up" data-delay="0.2">
+            <span class="result-tag">マーケティング</span>
+            <h4 class="result-company">海と日本PROJECT</h4>
+            <p class="result-headline teal-result">65社以上のスポンサー獲得</p>
+            <p class="case-text">SNSで活動の想いを発信し、企業スポンサーの大幅拡大を実現</p>
+          </div>
+          <div class="case-card result-card reveal-up" data-delay="0.25">
+            <span class="result-tag">マーケティング</span>
+            <h4 class="result-company">G.G.佐藤</h4>
+            <p class="result-headline dark-result">半年でフォロワー5万人突破</p>
+            <p class="case-text">コンセプト設計から撮影・編集までオールサポート</p>
+          </div>
+          <div class="case-card result-card reveal-up" data-delay="0.3">
+            <span class="result-tag">コンテンツ制作</span>
+            <h4 class="result-company">株式会社HMYイノベーション</h4>
+            <p class="result-headline dark-result">HP経由の受注数 月2.5倍</p>
+            <p class="case-text">事業コンセプト設計からHP・ホワイトペーパーまで一貫制作</p>
+          </div>
+          <div class="case-card result-card reveal-up" data-delay="0.35">
+            <span class="result-tag">コンテンツ制作</span>
+            <h4 class="result-company">成美学園グループ</h4>
+            <p class="result-headline red-result">入学前の不安解消を実現</p>
+            <p class="case-text">公式LINEを構築し、ユーザーに最適化した情報を提供</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HONESTY SECTION ===== -->
+    <section class="honesty" id="honesty">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— HONESTY</span>
+          <h2 class="section-title">
+            「信頼」ではなく、<br>
+            <span class="gradient-text">「誠実さ」を証明します。</span>
+          </h2>
+        </div>
+
+        <div class="honesty-grid">
+          <div class="honesty-card reveal-up" data-delay="0.1">
+            <div class="honesty-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#DE3F2C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>「できません」も<br>正直に言います</h3>
+            <p>できることと、できないことを最初に明確にします。過大な期待を持たせるより、正直に向き合う方が長く続く関係を作れます。</p>
+            <div class="honesty-example">
+              <p class="example-label">実例</p>
+              <p>ある経営者から「営業活動を全部自動化したい」と相談されました。私たちは「営業トークの完全自動化は難しいです。でも、顧客リストの整理とアプローチタイミングの提案なら今すぐできます」とお答えしました。正直に言ったことで、信頼が生まれました。</p>
+            </div>
+          </div>
+
+          <div class="honesty-card reveal-up" data-delay="0.2">
+            <div class="honesty-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#DE3F2C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <h3>未完成を<br>恐れません</h3>
+            <p>30点の試作を見せて、あなたの反応を聞いて、一緒に120点に育てます。2週間ごとに触ってもらい、「違う」と思ったらすぐ修正。</p>
+            <div class="honesty-example">
+              <p class="example-label">実例</p>
+              <p>初回デモは、ボタンが3つだけ。お客様は驚きました。でも、一緒にボタンを押しながら話し合い、2週間後の改善版で「これだよ！」と言ってもらえました。完成を待っていたら、この喜びは生まれませんでした。</p>
+            </div>
+          </div>
+
+          <div class="honesty-card reveal-up" data-delay="0.3">
+            <div class="honesty-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#DE3F2C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+            <h3>「納品して終わり」には<br>絶対にしません</h3>
+            <p>システムは動いても、人が動かなければ意味がない。運用開始後の1ヶ月が勝負です。私たちは、ずっと一緒にいます。</p>
+            <div class="honesty-example">
+              <p class="example-label">実例</p>
+              <p>運用開始3日目、「思ったより使われていない」との連絡。すぐ現場に行くと「ログイン方法がわからない」の声が多数。その場で超シンプルなマニュアルを作成。翌週から利用率が5倍になりました。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMMON PITFALLS SECTION ===== -->
+    <section class="pitfalls" id="pitfalls">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— COMMON PITFALLS</span>
+          <h2 class="section-title">
+            「完璧を待つ」ことが、<br>
+            <span class="gradient-text">プロジェクトを殺します。</span>
+          </h2>
+          <p class="section-desc">経営者が陥りやすい3つの落とし穴</p>
+        </div>
+
+        <div class="pitfalls-grid">
+          <div class="pitfall-card reveal-up" data-delay="0.1">
+            <div class="pitfall-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#DE3F2C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3>時間の浪費</h3>
+            <p>要件定義に3ヶ月。開発に6ヶ月。テストに2ヶ月。完成した頃には、市場が変わっている。お客様のニーズも、従業員の状況も、すべてが変わっている。</p>
+          </div>
+
+          <div class="pitfall-card reveal-up" data-delay="0.2">
+            <div class="pitfall-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#DE3F2C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 16s-1.5-2-4-2-4 2-4 2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <h3>期待のズレ</h3>
+            <p>開発中は進捗が見えない。納品されて初めて触る。そして気づく。「想像と違う」。でも、もう完成している。大きく作り直すことは難しい。</p>
+          </div>
+
+          <div class="pitfall-card reveal-up" data-delay="0.3">
+            <div class="pitfall-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#DE3F2C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><line x1="9" y1="2" x2="9" y2="22"/><line x1="15" y1="2" x2="15" y2="22"/><line x1="2" y1="9" x2="22" y2="9"/><line x1="2" y1="15" x2="22" y2="15"/></svg>
+            </div>
+            <h3>現場の拒絶</h3>
+            <p>使い方がわからない。誰に聞けばいいかわからない。問題が起きても、一人。完璧なシステムが、誰も使わない箱になる。これが最も多い失敗です。</p>
+          </div>
+        </div>
+
+        <div class="pitfalls-conclusion reveal-up" data-delay="0.4">
+          <p class="pitfalls-cta-text">だから私たちは、<br><span class="text-accent">「30点で出して、一緒に育てる」</span>を選びました。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== OUR PROMISES SECTION ===== -->
+    <section class="promises" id="promises">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— OUR PROMISES</span>
+          <h2 class="section-title">
+            ソウルシンクスの「伴走」、<br>
+            <span class="gradient-text">3つの約束。</span>
+          </h2>
+        </div>
+
+        <div class="promises-list">
+          <div class="promise-item reveal-up" data-delay="0.1">
+            <div class="promise-left">
+              <span class="promise-badge red-badge">約束 1</span>
+              <h3>曖昧にしない誠実さ</h3>
+              <p class="promise-sub">「できる」と「できない」を最初にハッキリ言います</p>
+              <ul class="promise-checks">
+                <li><span class="check-red">✓</span>できないことは最初に言う</li>
+                <li><span class="check-red">✓</span>リスクも事前に共有する</li>
+                <li><span class="check-red">✓</span>途中で方向転換もOK</li>
+                <li><span class="check-red">✓</span>「やらない」という選択も尊重</li>
+              </ul>
+            </div>
+            <div class="promise-right">
+              <p class="reason-label">なぜこれが大事か</p>
+              <p>導入の失敗で最も多いのは、「期待と現実のギャップ」です。営業時に良いことばかり言って、蓋を開けたら「できない」。私たちは、その逆をやります。最初に「できないこと」を明確にして、「できること」で確実に成果を出す。地味ですが、これが信頼を作ります。</p>
+            </div>
+          </div>
+
+          <div class="promise-item reveal-up" data-delay="0.2">
+            <div class="promise-left">
+              <span class="promise-badge teal-badge">約束 2</span>
+              <h3>30点でも一緒に見る</h3>
+              <p class="promise-sub">2週間ごとに、「今の状態」を見せます</p>
+              <ul class="promise-checks">
+                <li><span class="check-teal">✓</span>2週間で触れる状態を作る</li>
+                <li><span class="check-teal">✓</span>未完成でも、一緒に見る</li>
+                <li><span class="check-teal">✓</span>「違う」と思ったら即修正</li>
+                <li><span class="check-teal">✓</span>一緒に120点を目指す</li>
+              </ul>
+            </div>
+            <div class="promise-right">
+              <p class="reason-label">なぜこれが大事か</p>
+              <p>完成してから見せると、もう後戻りできません。でも、30点の段階で見せれば、「ここ、違うよね」と気軽に言えます。小さな修正を繰り返すことで、本当に現場に合うものができます。</p>
+            </div>
+          </div>
+
+          <div class="promise-item reveal-up" data-delay="0.3">
+            <div class="promise-left">
+              <span class="promise-badge dark-badge">約束 3</span>
+              <h3>運用後も、ずっと隣に</h3>
+              <p class="promise-sub">「納品して終わり」には絶対にしません</p>
+              <ul class="promise-checks">
+                <li><span class="check-dark">✓</span>運用開始後の1ヶ月が勝負</li>
+                <li><span class="check-dark">✓</span>現場の困りごとに即対応</li>
+                <li><span class="check-dark">✓</span>使い方の変化にも柔軟に</li>
+                <li><span class="check-dark">✓</span>ずっと一緒に改善していく</li>
+              </ul>
+            </div>
+            <div class="promise-right">
+              <p class="reason-label">なぜこれが大事か</p>
+              <p>どんなに良いシステムでも、運用開始直後は混乱します。「ログイン方法がわからない」「前のやり方と違って戸惑う」。この時、すぐに相談できる相手がいる。それが、成功と失敗の分かれ道です。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CEO MESSAGE SECTION ===== -->
+    <section class="ceo-message" id="message">
+      <div class="ceo-bg">
+        <div class="ceo-texture"></div>
+        <div class="ceo-gradient"></div>
+      </div>
+      <div class="container">
+        <div class="ceo-layout">
+          <div class="ceo-label reveal-left">
+            <span class="label-num">05</span>
+            <span class="label-text">CEO MESSAGE</span>
+          </div>
+
+          <div class="ceo-content">
+            <div class="ceo-photo-wrap reveal-up">
+              <div class="ceo-photo">
+                <img src="images/ceo-kikuchi.jpg" alt="菊地雅克 代表取締役CEO" class="ceo-photo-img">
+                <div class="photo-frame"></div>
+              </div>
+              <div class="ceo-name-block">
+                <div class="ceo-signature">
+                  <svg viewBox="0 0 300 80" class="signature-svg">
+                    <path d="M20 55 Q40 20 60 45 Q80 65 100 40 Q120 15 140 50 Q160 70 180 35 Q200 10 220 45 Q235 60 250 50 Q265 40 280 55" 
+                      stroke="#DE3F2C" stroke-width="2" fill="none" 
+                      stroke-linecap="round" stroke-linejoin="round"
+                      class="signature-path"/>
+                  </svg>
+                </div>
+                <span class="ceo-name-jp">菊地 雅克</span>
+                <span class="ceo-title">代表取締役 CEO</span>
+              </div>
+            </div>
+
+            <div class="ceo-text-block reveal-right" data-delay="0.2">
+              <div class="ceo-pull-quote">
+                <span class="pull-open">"</span>
+                逃げない、曖昧にしない。<br>
+                それが、私たちのすべてです。
+                <span class="pull-close">"</span>
+              </div>
+
+              <div class="ceo-body">
+                <p>
+                  私がこの会社を作ったのは、「IT業界には逃げ場が多すぎる」という
+                  問題意識からでした。
+                </p>
+                <p>
+                  仕様書の後ろに隠れる。専門用語で煙に巻く。
+                  「お客様の要件が変わったので」と言い訳をする。
+                  私自身も、かつてその一部でした。
+                </p>
+                <p>
+                  だから、逆のことをやろうと決めた。
+                  答えが出ていなくても正直に言う。
+                  失敗したら一緒に向き合う。
+                  30点の状態で始めても、一緒に走り続ける。
+                </p>
+                <p>
+                  「完璧な納品」ではなく「誠実な共創」を。
+                  それが、ソウルシンクスの存在理由です。
+                </p>
+              </div>
+
+              <div class="ceo-values-list">
+                <div class="ceo-value">
+                  <div class="value-dot"></div>
+                  <span>逃げない</span>
+                </div>
+                <div class="ceo-value">
+                  <div class="value-dot"></div>
+                  <span>曖昧にしない</span>
+                </div>
+                <div class="ceo-value">
+                  <div class="value-dot"></div>
+                  <span>誠実に向き合う</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TEAM STORY SECTION ===== -->
+    <section class="team-story" id="team-story">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— TEAM STORY</span>
+          <h2 class="section-title">
+            「伴走する人」が、<br>
+            <span class="gradient-text">ここにいます。</span>
+          </h2>
+        </div>
+
+        <div class="team-story-card reveal-up" data-delay="0.15">
+          <div class="team-story-inner">
+            <div class="team-member-photo">
+              <div class="team-photo-placeholder">
+                <span>市川</span>
+              </div>
+              <p class="team-member-name">市川</p>
+              <p class="team-member-role">プロジェクトリーダー</p>
+              <p class="team-member-dept">AXソリューション事業</p>
+            </div>
+            <div class="team-story-text">
+              <h3>「お客様に30点を見せる勇気」</h3>
+              <div class="team-story-body">
+                <p>最初は、怖かったです。未完成を見せるなんて。「まだこれしかできてないのか」と思われるんじゃないか。</p>
+                <p>でも、勇気を出して見せたとき、お客様は笑顔で言いました。</p>
+                <p class="team-story-quote">「いいね！ここがもっとこうなったら完璧だね」</p>
+                <p>その瞬間、気づいたんです。お客様は、完璧を求めていない。一緒に作る過程を、楽しみたいんだと。</p>
+                <p><strong>完璧を一人で作るより、30点を一緒に育てる方が、絶対に良いものができる。それを、僕は信じています。</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMMITMENT SECTION ===== -->
+    <section class="commitment" id="commitment">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— COMMITMENT</span>
+          <h2 class="section-title">
+            私たちが<br>
+            <span class="gradient-text">約束すること。</span>
+          </h2>
+        </div>
+
+        <div class="commitment-grid">
+          <div class="commitment-item reveal-up" data-delay="0.1">
+            <h3>30点で見せる</h3>
+            <p>未完成を恐れません。2週間ごとに触っていただき、一緒に育てます。</p>
+          </div>
+          <div class="commitment-item reveal-up" data-delay="0.15">
+            <h3>できないことは正直に言う</h3>
+            <p>過大な期待を持たせるより、できることで確実に成果を出します。</p>
+          </div>
+          <div class="commitment-item reveal-up" data-delay="0.2">
+            <h3>運用後も隣にいる</h3>
+            <p>納品して終わりではありません。運用開始後こそ、伴走の本番です。</p>
+          </div>
+          <div class="commitment-item reveal-up" data-delay="0.25">
+            <h3>修正に柔軟に対応する</h3>
+            <p>「違う」と思ったら即修正。一緒に育てる前提で進めます。</p>
+          </div>
+          <div class="commitment-item reveal-up" data-delay="0.3">
+            <h3>伴走パートナーとして</h3>
+            <p>発注者と受注者ではなく、同じ方向を向くパートナーであり続けます。</p>
+          </div>
+          <div class="commitment-item reveal-up" data-delay="0.35">
+            <h3>中小企業の味方として</h3>
+            <p>大手には不要なものも、人手不足の現場では大きな力になります。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROCESS TIMELINE SECTION ===== -->
+    <section class="process-timeline" id="process-timeline">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— PROCESS</span>
+          <h2 class="section-title">
+            「どう始まって、どう続くのか」を<br>
+            <span class="gradient-text">先にお伝えします。</span>
+          </h2>
+        </div>
+
+        <div class="timeline-list">
+          <div class="timeline-item reveal-up" data-delay="0.1">
+            <div class="timeline-step-col">
+              <div class="timeline-circle red-circle">1</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-week red-week">Week 1</p>
+              <h3>初回対話（無料・90分）</h3>
+              <ul class="timeline-bullets">
+                <li>今、何に困っているかをヒアリング</li>
+                <li>できること・できないことを正直にお伝え</li>
+                <li>最初の2週間で何を作るかイメージ共有</li>
+                <li>一緒にやるかどうか、判断いただく</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-up" data-delay="0.2">
+            <div class="timeline-step-col">
+              <div class="timeline-circle teal-circle">2</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-week teal-week">Week 2–3</p>
+              <h3>最初の30点を作る</h3>
+              <ul class="timeline-bullets">
+                <li>2週間で触れる状態にする</li>
+                <li>核心機能だけに絞って、まず「感触」を確かめる</li>
+                <li>実際に触ってもらい、方向性を確認</li>
+                <li>「違う」なら方向転換、「これだ」なら次へ</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-up" data-delay="0.3">
+            <div class="timeline-step-col">
+              <div class="timeline-circle dark-circle">3</div>
+              <div class="timeline-line"></div>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-week dark-week">Week 4–12</p>
+              <h3>一緒に120点へ</h3>
+              <ul class="timeline-bullets">
+                <li>2週間ごとに改善版をお見せ</li>
+                <li>前回の反応を反映し、新しい機能を追加</li>
+                <li>「ここが使いにくい」「こういう機能が欲しい」に柔軟対応</li>
+                <li>完成の定義は、あなた次第</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item reveal-up" data-delay="0.4">
+            <div class="timeline-step-col">
+              <div class="timeline-circle red-circle">4</div>
+            </div>
+            <div class="timeline-content">
+              <p class="timeline-week red-week">Week 13〜</p>
+              <h3>運用しながら育てる</h3>
+              <ul class="timeline-bullets">
+                <li>現場で使い始め、従業員の反応を一緒に見る</li>
+                <li>困ったらすぐ対応。使い方の質問、不具合、追加要望</li>
+                <li>月1回の定例ミーティングで一緒に改善</li>
+                <li>ずっと、隣にいます</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing" id="pricing">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">— PRICING</span>
+          <h2 class="section-title">
+            価格も、<br>
+            <span class="gradient-text">曖昧にしません。</span>
+          </h2>
+          <p class="section-desc">「高い」か「安い」かは、費用対効果で決まります。</p>
+        </div>
+
+        <div class="pricing-why reveal-up" data-delay="0.1">
+          <h3>なぜ、大手の半額以下でできるのか？</h3>
+          <p>3体のAIが設計・コーディング・品質検査を自動で行うため、人件費が大幅に下がります。<br><small>※競合他社の費用の多くは「要件定義という名の会議費」が大部分を占めています</small></p>
+        </div>
+
+        <div class="pricing-table-wrap reveal-up" data-delay="0.2">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th class="table-col-label">比較項目</th>
+                <th class="table-col-others">一般の開発会社</th>
+                <th class="table-col-us">ソウルシンクス</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>商談後すぐ</td>
+                <td>見積もりに1週間</td>
+                <td class="us-col">翌日に動くデモを無料送付</td>
+              </tr>
+              <tr class="alt-row">
+                <td>納品まで</td>
+                <td>2〜3ヶ月</td>
+                <td class="us-col">最短2週間</td>
+              </tr>
+              <tr>
+                <td>費用</td>
+                <td>300〜500万円</td>
+                <td class="us-col">80〜300万円</td>
+              </tr>
+              <tr class="alt-row">
+                <td>品質チェック</td>
+                <td>人間1〜2名の目</td>
+                <td class="us-col">3体のAIが全コード審査</td>
+              </tr>
+              <tr>
+                <td>稼働率</td>
+                <td>非公開が多い</td>
+                <td class="us-col">100%（5本全て本番稼働中）</td>
+              </tr>
+              <tr class="alt-row">
+                <td>開発中の修正</td>
+                <td>別途見積・数週間待ち</td>
+                <td class="us-col">その場で即対応・追加費用なし</td>
+              </tr>
+              <tr>
+                <td>納品後</td>
+                <td>「追加は別途見積もり」が多い</td>
+                <td class="us-col">月額保守プランで継続伴走</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="pricing-plans">
+          <div class="pricing-plan reveal-up" data-delay="0.3">
+            <p class="plan-phase red-phase">初期検証フェーズ（Week 1–12）</p>
+            <p class="plan-price">30万円<span class="price-range">〜</span>80万円</p>
+            <ul class="plan-features">
+              <li><span class="check-red">✓</span>初回対話（無料）</li>
+              <li><span class="check-red">✓</span>30点→120点への伴走</li>
+              <li><span class="check-red">✓</span>2週間ごとの改善サイクル</li>
+              <li><span class="check-red">✓</span>運用開始サポート（1ヶ月）</li>
+            </ul>
+          </div>
+          <div class="pricing-plan reveal-up" data-delay="0.4">
+            <p class="plan-phase teal-phase">継続伴走フェーズ（運用開始後）</p>
+            <p class="plan-price">月額 5万円<span class="price-range">〜</span>15万円</p>
+            <ul class="plan-features">
+              <li><span class="check-teal">✓</span>月1回の定例ミーティング</li>
+              <li><span class="check-teal">✓</span>困った時の即対応</li>
+              <li><span class="check-teal">✓</span>機能追加・改善</li>
+              <li><span class="check-teal">✓</span>いつでも解約可能</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RECRUIT SECTION ===== -->
+    <section class="recruit" id="recruit">
+      <div class="container">
+        <div class="section-header reveal-up">
+          <span class="section-label">06 — RECRUIT</span>
+          <h2 class="section-title">
+            「逃げない人」を、<br>
+            <span class="gradient-text">求めています。</span>
+          </h2>
+          <p class="section-desc">
+            完璧なスキルは要りません。<br>
+            現場と向き合う覚悟のある人と、一緒に走りたい。
+          </p>
+        </div>
+
+        <div class="recruit-grid">
+          <div class="recruit-card reveal-up" data-delay="0.1">
+            <div class="recruit-tag">FULL-TIME</div>
+            <h3 class="recruit-role">ITコンサルタント</h3>
+            <p class="recruit-desc">中小企業のDX推進を、現場から支える。業務理解力と誠実さが武器になる仕事。</p>
+            <div class="recruit-meta">
+              <span><i class="fas fa-map-marker-alt"></i> リモート可・東京</span>
+              <span><i class="fas fa-yen-sign"></i> 経験考慮</span>
+            </div>
+            <a href="#contact" class="recruit-link">
+              <span>応募・詳細</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="recruit-card featured reveal-up" data-delay="0.2">
+            <div class="recruit-tag">FULL-TIME</div>
+            <h3 class="recruit-role">システムエンジニア<br>（共創型）</h3>
+            <p class="recruit-desc">コードを書く人ではなく、お客様と一緒に「解」を探す人。技術と人間力を両立させたい方。</p>
+            <div class="recruit-meta">
+              <span><i class="fas fa-map-marker-alt"></i> リモート可・全国</span>
+              <span><i class="fas fa-yen-sign"></i> 経験考慮</span>
+            </div>
+            <a href="#contact" class="recruit-link">
+              <span>応募・詳細</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="recruit-card reveal-up" data-delay="0.3">
+            <div class="recruit-tag">PART-TIME</div>
+            <h3 class="recruit-role">インターン<br>（現場密着型）</h3>
+            <p class="recruit-desc">教科書にないことを、現場で学ぶ。失敗を恐れず、走り続けられる学生を求めています。</p>
+            <div class="recruit-meta">
+              <span><i class="fas fa-map-marker-alt"></i> 東京・オンライン</span>
+              <span><i class="fas fa-clock"></i> 週2日〜</span>
+            </div>
+            <a href="#contact" class="recruit-link">
+              <span>応募・詳細</span>
+              <i class="fas fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="recruit-cta reveal-up" data-delay="0.4">
+          <p>「ぴったりな求人がない」という方も、<br>まずはカジュアルにお話しましょう。</p>
+          <a href="#contact" class="btn-primary">カジュアル面談を申し込む</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact" id="contact">
+      <div class="contact-bg">
+        <div class="contact-geo contact-geo-1"></div>
+        <div class="contact-geo contact-geo-2"></div>
+      </div>
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-info reveal-left">
+            <span class="section-label">07 — CONTACT</span>
+            <h2 class="contact-title">
+              まず、話しましょう。<br>
+              <em>30点の状態で。</em>
+            </h2>
+            <p class="contact-desc">
+              課題が整理されていなくても大丈夫。<br>
+              「なんとなく困っている」その段階から、<br>
+              一緒に整理するのが私たちの仕事です。
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method">
+                <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                <div class="method-info">
+                  <span class="method-label">メール</span>
+                  <span class="method-value">info@soulsyncs.jp</span>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon"><i class="fas fa-phone"></i></div>
+                <div class="method-info">
+                  <span class="method-label">電話</span>
+                  <span class="method-value">043-330-3303<small>（平日9:00-18:00）</small></span>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="method-info">
+                  <span class="method-label">所在地</span>
+                  <span class="method-value">〒261-0023 千葉県千葉市美浜区中瀬1-3<br>幕張テクノガーデンCB棟</span>
+                </div>
+              </div>
+              <div class="contact-method">
+                <div class="method-icon"><i class="fas fa-calendar"></i></div>
+                <div class="method-info">
+                  <span class="method-label">初回相談</span>
+                  <span class="method-value">90分・完全無料</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap reveal-right">
+            <form class="contact-form" id="contactForm">
+              <div class="form-group">
+                <label for="company">会社名</label>
+                <div class="input-wrap">
+                  <input type="text" id="company" name="company" placeholder="株式会社〇〇" required>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="name">お名前</label>
+                <div class="input-wrap">
+                  <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email">メールアドレス</label>
+                <div class="input-wrap">
+                  <input type="email" id="email" name="email" placeholder="taro@example.com" required>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>相談内容（複数可）</label>
+                <div class="checkbox-group">
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="topic" value="dx">
+                    <span class="checkbox-custom"></span>
+                    業務デジタル化
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="topic" value="system">
+                    <span class="checkbox-custom"></span>
+                    システム開発
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="topic" value="it">
+                    <span class="checkbox-custom"></span>
+                    IT内製化支援
+                  </label>
+                  <label class="checkbox-label">
+                    <input type="checkbox" name="topic" value="other">
+                    <span class="checkbox-custom"></span>
+                    その他・まず話したい
+                  </label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message">状況・課題（30点で大丈夫）</label>
+                <div class="input-wrap">
+                  <textarea id="message" name="message" rows="4" placeholder="うまく言語化できなくても構いません。今困っていることを、思いつくままに書いてください。"></textarea>
+                  <div class="input-line"></div>
+                </div>
+              </div>
+              <button type="submit" class="btn-submit" id="submitBtn">
+                <span class="btn-text">相談を送る</span>
+                <span class="btn-loading" style="display:none">
+                  <i class="fas fa-circle-notch fa-spin"></i>
+                </span>
+                <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </button>
+              <div class="form-success" id="formSuccess" style="display:none">
+                <i class="fas fa-check-circle"></i>
+                <span>送信しました。24時間以内にご連絡します。</span>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <img src="images/logo-dark.png" alt="SoulSyncs" class="logo-img footer-logo-img">
+          </div>
+          <p class="footer-tagline">Humanity in Logic</p>
+          <p class="footer-desc">技術ではなく、人間力で課題を解く。<br>共創型デジタルパートナー。</p>
+        </div>
+        <div class="footer-nav">
+          <div class="footer-nav-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#philosophy">私たちの思想</a></li>
+              <li><a href="#message">CEOメッセージ</a></li>
+              <li><a href="#proof">実績・数字</a></li>
+              <li><a href="#live-systems">稼働中のシステム</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">業務デジタル化</a></li>
+              <li><a href="#services">システム開発</a></li>
+              <li><a href="#services">IT内製化支援</a></li>
+              <li><a href="#pricing">料金プラン</a></li>
+            </ul>
+          </div>
+          <div class="footer-nav-col">
+            <h4>Contact</h4>
+            <ul>
+              <li><a href="#recruit">採用情報</a></li>
+              <li><a href="#contact">お問い合わせ</a></li>
+              <li><a href="tel:043-330-3303">043-330-3303</a></li>
+              <li><a href="mailto:info@soulsyncs.jp">info@soulsyncs.jp</a></li>
+            </ul>
+            <p class="footer-address">〒261-0023 千葉県千葉市美浜区中瀬1-3<br>幕張テクノガーデンCB棟<br>設立 2018年3月</p>
+          </div>
+        </div>
+      </div>
+        <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 Soul Sync's Inc. All rights reserved.</p>
+        <div class="footer-links">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">利用規約</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 浮かぶCTAボタン -->
+  <div class="floating-cta" id="floatingCta">
+    <a href="#contact" class="floating-btn">
+      <i class="fas fa-comment-dots"></i>
+      <span>相談する</span>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
